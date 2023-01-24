@@ -6,7 +6,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body{
+  background-color: #2E2764;
+}
 /* Header Css Start */
   header{
     background: #2E2764;
@@ -88,7 +90,7 @@
     display: flex;
     align-items: flex-start;
     gap: 50px;
-   padding: 75px 0;
+    padding: 75px 0;
   }
   .home-text h1{
     font-family: 'Caladea';
@@ -150,6 +152,59 @@
     border-radius: 30px;
     border: none;
   }
+  .home-section{
+    display: flex;
+    justify-content: center;
+  }
+  .home-img img{
+    height: 650px;
+  }
+  .home-img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .home-img-main{
+    position: relative;
+    z-index: 1;
+  }
+  .home-img-bg{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+  }
+  .home-img-bg img{
+    width: 300px;
+    height: 500px;
+  }
+  .course-partners{
+    position: relative;
+    background: url(./images/home-imgs/course-partner.png);
+    background-color: #2E2764;
+    height: 166px;
+    margin: 10px 50px;
+    background-size: 100% 100%;
+  }
+  .our-course-partners{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-top: 75px;
+  }
+  .partners-text h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    left: 55px;
+    top: -10px;
+    color: #D9ECFF;
+    position: absolute;
+  }
+  .partner-imgs{
+    width: 155px;
+  }
 /* Home Css End */
 
 
@@ -171,6 +226,26 @@
   .menu-bar{
     display: block;
   }
+  .home{
+    padding: 10px;
+    justify-content: center;
+  }
+  .half-home{
+    display: none;
+  }
+  .home-section{
+    flex-direction: column;
+  }
+  .course-partners{
+    height: 100%;
+    position: static;
+  }
+  .partners-text h1{
+    position: static;
+  }
+  .our-course-partners{
+    flex-wrap: wrap;
+  }
 }
 
 
@@ -185,5 +260,23 @@
   }
   .header-btns{
     display: none;
+  }
+  .home-img{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-search{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .home-text h1{
+    font-size: 55px;
+  }
+  .home input{
+    width: 100%;
   }
 }
